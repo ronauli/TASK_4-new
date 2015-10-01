@@ -36,6 +36,26 @@ void playNext(address &P){
     P = Next(P);
     playSong(P);
 }
+void playPrev(address &P)
+{
+    P=Prev(P);
+    playSong(P);
+}
+void playRepeat(List &L, int n)
+{
+    address(P);
+    P=First(L);
+    for (int i=1; i<n+1; i++)
+    {
+        while(Next(P)!=First(L))
+        {
+            playSong(P);
+            P=Next(P);
+        }
+        playSong(P);
+        P=First(L);
+    }
+
 
 void sortList(List &L, int condition) {
     switch(condition) {
